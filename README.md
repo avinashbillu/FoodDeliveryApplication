@@ -237,7 +237,7 @@ Delivered
 
 | Page | Preview |
 |------|---------|
-| Home | ![image alt](ProjectScreenshorts/Screenshot 2026-07-13 173912.png) |
+| Home | ![image alt](ProjectScreenshorts/Home.png) |
 | Restaurant | ![](screenshots/restaurants.png) |
 | Menu | ![](screenshots/menu.png) |
 | Cart | ![](screenshots/cart.png) |
