@@ -233,21 +233,14 @@ Delivered
 
 # 📸 Screenshots
 
-> Add screenshots of the following pages inside a `screenshots` folder and update the paths.
-
-| Page | Preview |
-|------|---------|
-| Home | ![image alt](ProjectScreenshorts/Home.png) |
-| Restaurant | ![](screenshots/restaurants.png) |
-| Menu | ![](screenshots/menu.png) |
-| Cart | ![](screenshots/cart.png) |
-| Checkout | ![](screenshots/checkout.png) |
-| Razorpay Payment | ![](screenshots/payment.png) |
-| Order Success | ![](screenshots/order-success.png) |
-| My Orders | ![](screenshots/orders.png) |
-| Track Order | ![](screenshots/track-order.png) |
-| Profile | ![](screenshots/profile.png) |
-
+![image alt](ProjectScreenshorts/Home.png)
+![image alt](ProjectScreenshorts/Restaurant.png)
+![image alt](ProjectScreenshorts/Menu.png)
+![image alt](ProjectScreenshorts/Cart.png)
+![image alt](ProjectScreenshorts/Checkout.png)
+![image alt](ProjectScreenshorts/Payment.png)
+![image alt](ProjectScreenshorts/OrderSucess.png)
+![image alt](ProjectScreenshorts/TrackOrder.png)
 ---
 
 # 🚀 Getting Started
