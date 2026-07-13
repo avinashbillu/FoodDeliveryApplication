@@ -235,12 +235,12 @@ Delivered
 
 ![image alt](ProjectScreenshorts/Home.png)
 ![image alt](ProjectScreenshorts/Restaurant)
-![image alt](ProjectScreenshorts/Menu.png)
-![image alt](ProjectScreenshorts/Cart.png)
-![image alt](ProjectScreenshorts/Checkout.png)
-![image alt](ProjectScreenshorts/Payment.png)
-![image alt](ProjectScreenshorts/OrderSucess.png)
-![image alt](ProjectScreenshorts/TrackOrder.png)
+![image alt](ProjectScreenshorts/Menu)
+![image alt](ProjectScreenshorts/Cart)
+![image alt](ProjectScreenshorts/Checkout)
+![image alt](ProjectScreenshorts/Payment)
+![image alt](ProjectScreenshorts/OrderSucess)
+![image alt](ProjectScreenshorts/TrackOrder)
 ---
 
 # 🚀 Getting Started
