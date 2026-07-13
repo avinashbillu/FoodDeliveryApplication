@@ -234,7 +234,7 @@ Delivered
 # 📸 Screenshots
 
 ![image alt](ProjectScreenshorts/Home.png)
-![image alt](ProjectScreenshorts/Restaurant.png)
+![image alt](ProjectScreenshorts/Restaurant)
 ![image alt](ProjectScreenshorts/Menu.png)
 ![image alt](ProjectScreenshorts/Cart.png)
 ![image alt](ProjectScreenshorts/Checkout.png)
