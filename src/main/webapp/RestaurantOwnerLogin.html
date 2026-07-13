@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>FoodHub | Restaurant Owner Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#fff8f3;
+    overflow:hidden;
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    padding:18px 56px;
+    gap:0;
+}
+
+
+/*===========================
+        LEFT SIDE
+============================*/
+
+.left{
+
+    flex:1;
+
+    background:#fff8f3;
+
+    border-radius:28px;
+
+    padding:30px 48px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.logo{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#fc8019;
+
+    margin-bottom:18px;
+}
+
+
+
+.title{
+
+    font-size:52px;
+
+    line-height:1.05;
+
+    font-weight:700;
+
+    color:#1d2433;
+
+    letter-spacing:-1px;
+}
+
+
+.title span{
+
+    color:#fc8019;
+}
+
+
+.subtitle{
+
+    margin-top:14px;
+
+    width:520px;
+
+    font-size:16px;
+
+    color:#566172;
+
+    line-height:1.7;
+}
+
+
+
+/*===========================
+      FEATURE CARDS
+============================*/
+
+.features{
+
+    margin-top:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    width:500px;
+
+    position:relative;
+
+    z-index:20;
+}
+
+
+.feature-card{
+
+	width:470px;
+    background:white;
+
+    border-radius:18px;
+
+    padding:14px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.06);
+
+    transition:.35s;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.10);
+}
+
+
+
+.feature-icon{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#fff3ea;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    flex-shrink:0;
+}
+
+
+
+.feature-content h2{
+
+    font-size:17px;
+
+    color:#1f2937;
+
+    margin-bottom:2px;
+}
+
+.feature-content p{
+
+    font-size:15px;
+	width:290px;
+    color:#666;
+
+    line-height:1.5;
+}
+
+
+
+/*===========================
+     RESTAURANT IMAGE
+============================*/
+
+.restaurant-image{
+
+    position:absolute;
+
+    bottom:10px;
+
+    right:-50px;
+
+    width:420px;
+
+    opacity:.96;
+}
+
+
+
+/*===========================
+      DECORATIONS
+============================*/
+
+.bg-icon{
+
+    position:absolute;
+
+    opacity:.10;
+
+    font-size:60px;
+
+    color:#fc8019;
+}
+
+.chef{
+
+    top:40px;
+
+    right:200px;
+}
+
+.leaf{
+
+    top:330px;
+
+    right:420px;
+}
+
+.cover{
+
+    top:220px;
+
+    right:40px;
+}
+
+.dot{
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    background:#fc8019;
+
+    opacity:.35;
+}
+
+.dot1{
+
+    top:180px;
+
+    right:150px;
+}
+
+.dot2{
+
+    top:400px;
+
+    right:20px;
+}
+
+.dot3{
+
+    bottom:120px;
+
+    right:200px;
+}
+
+
+
+/*===========================
+      RIGHT SIDE
+============================*/
+
+.right{
+
+   flex:0.9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fff8f3;
+
+    padding:25px;
+}
+
+
+
+.login-card{
+
+    width:100%;
+
+    max-width:500px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:30px 32px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    position:relative;
+}
+
+
+
+/*===========================
+      LOGIN ICON
+============================*/
+
+.owner-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#fff4eb;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:34px;
+
+    margin:0 auto 15px;
+}
+
+
+
+.login-card h1{
+
+    text-align:center;
+
+    font-size:34px;
+
+    color:#1d2433;
+	 font-weight:700;
+    margin-bottom:6px;
+}
+
+
+.login-card h3{
+
+    font-size:15px;
+
+    color:#6b7280;
+
+    margin-bottom:22px;
+
+    font-weight:500;
+
+}
+
+
+
+/*===========================
+          FORM
+============================*/
+
+.form-group{
+
+    margin-bottom:20px;
+}
+
+.form-group label{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#222;
+}
+
+.input-box{
+
+    width:100%;
+
+    height:50px;
+
+    border:2px solid #ececec;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 20px;
+
+    transition:.30s;
+}
+
+.input-box:hover{
+
+    border-color:#fc8019;
+}
+
+.input-box:focus-within{
+
+    border-color:#fc8019;
+
+    box-shadow:0 0 0 5px rgba(252,128,25,.12);
+}
+
+.input-box span{
+
+    font-size:20px;
+
+    margin-right:16px;
+}
+
+.input-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:transparent;
+}
+
+/*===========================
+        OPTIONS
+============================*/
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:-4px;
+
+    margin-bottom:20px;
+}
+
+.remember{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:17px;
+
+    color:#555;
+}
+
+.remember input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#fc8019;
+}
+
+.forgot{
+
+    text-decoration:none;
+
+    color:#fc8019;
+
+    font-size:17px;
+
+    font-weight:600;
+}
+
+.forgot:hover{
+
+    text-decoration:underline;
+}
+
+
+
+/*===========================
+        LOGIN BUTTON
+============================*/
+
+.login-btn{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fc8019;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.login-btn:hover{
+
+    background:#ea7000;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(252,128,25,.35);
+}
+
+
+
+/*===========================
+      REGISTER BUTTON
+============================*/
+
+.register-btn{
+
+    margin-top:14px;
+
+    width:100%;
+
+    height:50px;
+
+    border:2px solid #fc8019;
+
+    border-radius:12px;
+
+    background:white;
+
+    color:#fc8019;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.register-btn:hover{
+
+    background:#fc8019;
+
+    color:white;
+}
+
+
+
+/*===========================
+         FOOTER
+============================*/
+
+.bottom-text{
+
+    margin-top:14px;
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+}
+
+.bottom-text a{
+
+    text-decoration:none;
+
+    color:#fc8019;
+
+    font-weight:700;
+}
+
+.bottom-text a:hover{
+
+    text-decoration:underline;
+}
+
+::placeholder{
+
+    color:#9ca3af;
+
+}
+
+/*===========================
+       RESPONSIVE
+============================*/
+
+@media(max-width:1300px){
+
+.left{
+
+    width:50%;
+}
+
+.right{
+
+    width:50%;
+}
+
+.title{
+
+    font-size:62px;
+}
+
+.restaurant-image{
+
+    width:470px;
+}
+
+}
+
+
+@media(max-width:1050px){
+
+.left{
+
+    display:none;
+}
+
+.right{
+
+    width:100%;
+}
+
+.login-card{
+
+    max-width:650px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+        <div class="logo">
+            FoodHub
+        </div>
+
+        <h1 class="title">
+
+            Manage Your<br>
+
+            <span>Restaurant!</span>
+
+        </h1>
+
+        <p class="subtitle">
+
+            Login to manage orders, menus, customers,
+            earnings and restaurant operations from one dashboard.
+
+        </p>
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📦
+                </div>
+
+                <div class="feature-content">
+
+                    <h2>Live Orders</h2>
+
+                    <p>Accept and manage incoming orders instantly.</p>
+
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🍽
+                </div>
+
+                <div class="feature-content">
+
+                    <h2>Menu Control</h2>
+
+                    <p>Add, edit and update menu items anytime.</p>
+
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📈
+                </div>
+
+                <div class="feature-content">
+
+                    <h2>Business Analytics</h2>
+
+                    <p>Track revenue, ratings and restaurant growth.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bg-icon chef">👨‍🍳</div>
+
+        <div class="bg-icon cover">🍽</div>
+
+        <div class="bg-icon leaf">🥗</div>
+
+        <div class="dot dot1"></div>
+
+        <div class="dot dot2"></div>
+
+        <div class="dot dot3"></div>
+
+        <img src="images/banner6.png"
+             class="restaurant-image">
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+        <div class="login-card">
+
+            <div class="owner-icon">
+
+                👨‍🍳
+
+            </div>
+
+            <h1>
+
+                Owner Login
+
+            </h1>
+
+            <h3>
+
+                Welcome back to your Restaurant Dashboard
+
+            </h3>
+
+            <form action="RestaurantOwnerLoginServlet"
+                  method="post">
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <div class="input-box">
+
+                        <span>📧</span>
+
+                        <input type="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               required>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Password</label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input type="password"
+                               name="password"
+                               placeholder="Enter your password"
+                               required>
+
+                    </div>
+
+                </div>
+
+                <div class="options">
+
+                    <label class="remember">
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#"
+                       class="forgot">
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+                <button class="login-btn"
+                        type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <button class="register-btn"
+
+                    onclick="window.location.href='RegistrationPage.html'">
+
+                Register Restaurant
+
+            </button>
+
+            <div class="bottom-text">
+
+                Looking for customer login?
+
+                <a href="LoginPage.html">
+
+                    Customer Login
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

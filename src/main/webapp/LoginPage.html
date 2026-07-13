@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodHub Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff8f3;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:1450px;
+    height:100vh;
+    background:#fffaf6;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+/* LEFT SECTION */
+
+.left-section{
+    width:52%;
+    background:#fff8f3;
+    position:relative;
+    padding:30px 40px;
+    overflow:hidden;
+}
+
+.logo{
+    font-size:45px;
+    font-weight:650;
+    color:#fc8019;
+    margin-bottom:45px;
+}
+
+.hero-title{
+    font-size:68px;
+    line-height:1;
+    font-weight:650;
+    color:#1f2937;
+    letter-spacing:-2px;
+}
+
+.hero-title span{
+    color:#ff6b00;
+}
+
+.hero-desc{
+    margin-top:5px;
+    width:420px;
+    font-size:18px;
+    line-height:1.7;
+    color:#5f6c7b;
+}
+
+.features{
+    margin-top:25px;
+    width:350px;
+    position:relative;
+    z-index:2;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:white;
+ 	width:340px;
+    padding:14px;
+    border-radius:18px;
+    margin-bottom:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.icon{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.feature h4{
+    font-size:18px;
+    color:#222;
+}
+
+.feature p{
+    font-size:14px;
+    color:#777;
+}
+
+.food-image{
+    position:absolute;
+    bottom:-10px;
+    left:70%;
+    transform:translateX(-50%);
+    width:560px;
+    z-index:0;
+}
+
+/* RIGHT SECTION */
+
+.right-section{
+    width:48%;
+    background:#fff8f3;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.login-card{
+    width:100%;
+    max-width:620px;
+    background:white;
+    padding:32px;
+    border-radius:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.login-card h2{
+    font-size:48px;
+    color:#1f2937;
+    margin-bottom:5px;
+}
+
+.login-card p{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:10px;
+    color:#222;
+}
+
+.input-box{
+    position:relative;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px 16px 14px 50px;
+    border:1px solid #e6e6e6;
+    border-radius:14px;
+    font-size:15px;
+    outline:none;
+    height:auto;
+}
+
+.input-box input:focus{
+    border-color:#fc8019;
+}
+
+.input-box span{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:20px;
+}
+
+.forgot{
+    text-align:right;
+    margin-bottom:25px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#ff6b00;
+    font-weight:600;
+}
+
+.login-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#fc8019;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#e95f00;
+}
+
+
+
+.signup{
+    text-align:center;
+    margin-top:15px;
+    color:#555;
+}
+
+.signup a{
+    text-decoration:none;
+    color:#ff6b00;
+    font-weight:600;
+}
+
+.food-bg{
+    position:absolute;
+    width:700px;
+    height:300px;
+    background:#ffe0c2;
+    border-radius:50%;
+    bottom:-140px;
+    left:65%;
+    transform:translateX(-50%) rotate(-15deg);
+    z-index:0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.container{
+    flex-direction:column;
+}
+
+.left-section{
+    min-height:650px;
+}
+
+.food-image{
+    width:300px;
+}
+
+.hero-title{
+    font-size:55px;
+}
+}
+
+@media(max-width:768px){
+
+.hero-title{
+    font-size:42px;
+}
+
+.hero-desc{
+    font-size:18px;
+}
+
+.login-card{
+    padding:30px;
+}
+
+.login-card h2{
+    font-size:40px;
+}
+
+.food-image{
+    position:relative;
+    left:0;
+    margin-top:30px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left-section">
+
+        <div class="logo">FoodHub</div>
+
+        <h1 class="hero-title">
+            Good Food,<br>
+            <span>Great Mood!</span>
+        </h1>
+
+        <p class="hero-desc">
+            Login to continue ordering your favourite food.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">🛵</div>
+                <div>
+                    <h4>Fast Delivery</h4>
+                    <p>At Your Doorstep</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon">⏰</div>
+                <div>
+                    <h4>20 min</h4>
+                    <p>Average Delivery Time</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🏷️</div>
+                <div>
+                    <h4>Great Offers</h4>
+                    <p>On Every Order</p>
+                </div>
+            </div>
+
+        </div>
+        
+		<div class="food-bg"></div>
+        <img src="images/banner6.png" class="food-image" alt="Food">
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right-section">
+
+        <div class="login-card">
+
+            <h2>Login</h2>
+
+            <p>Welcome back! Please login to your account.</p>
+
+            <form action="callLoginServlet" method="POST">
+
+                <div class="form-group">
+                    <label>Email or Phone Number</label>
+                    <div class="input-box">
+                        <span>👤</span>
+                        <input type="text" placeholder="Enter email or phone number" name="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-box">
+                        <span>🔒</span>
+                        <input type="password" placeholder="Enter your password" name="password">
+                    </div>
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+
+            <div class="signup">
+                Don't have an account?
+                <a href="RegistrationPage.html">Sign Up</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

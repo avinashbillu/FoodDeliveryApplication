@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FoodHub - Sign Up</title>
+
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: #fff8f3;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.signup-container {
+	display: flex;
+	height: 100vh;
+}
+
+/* LEFT PANEL */
+.left-panel {
+	width: 52%;
+	background: #fff8f3;
+	position: relative;
+	padding: 30px 40px;
+	overflow: hidden;
+}
+
+.logo {
+	font-size: 45px;
+	font-weight: 650;
+	color: #fc8019;
+	margin-bottom: 45px;
+}
+
+.left-panel h1 {
+	font-size: 70px;
+	line-height: 1;
+	font-weight: 650;
+	color: #1f2937;
+	letter-spacing: -2px;
+}
+
+.left-panel h1 span {
+	color: #fc8019;
+}
+
+.left-panel p {
+	margin-top: 5px;
+	width: 420px;
+	font-size: 18px;
+	line-height: 1.7;
+	color: #5f6c7b;
+}
+
+/* FEATURE CARDS */
+.feature {
+	margin-top: 25px;
+	width: 350px;
+	position: relative;
+	z-index: 2;
+}
+
+.feature-card {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	background: white;
+	padding: 14px;
+	border-radius: 18px;
+	margin-bottom: 12px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+}
+
+.feature-icon {
+	font-size: 30px;
+}
+
+.feature-card h4 {
+	font-size: 22px;
+	color: #1f2937;
+}
+
+.feature-card p {
+	width: auto;
+	margin: 0;
+	font-size: 15px;
+	color: #666;
+}
+
+/* IMAGE */
+.food-image {
+	position: absolute;
+	bottom: -10px;
+	left: 70%;
+	transform: translateX(-50%);
+	width: 650px;
+	z-index: 0;
+}
+
+/* DECORATIVE ICONS */
+.bg-icon {
+	position: absolute;
+	color: #fc8019;
+	opacity: .12;
+	font-size: 55px;
+}
+
+.burger {
+	top: 80px;
+	right: 80px;
+}
+
+.pizza {
+	bottom: 250px;
+	left: 30px;
+}
+
+.leaf {
+	top: 340px;
+	right: 100px;
+}
+
+/* DOTS */
+.dot {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fc8019;
+	opacity: .35;
+}
+
+.dot1 {
+	top: 250px;
+	right: 30px;
+}
+
+.dot2 {
+	top: 520px;
+	right: 120px;
+}
+
+.dot3 {
+	bottom: 200px;
+	right: 60px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+	width: 48%;
+	background: #fff8f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.signup-card {
+	width: 100%;
+	max-width: 650px;
+	background: white;
+	padding: 35px;
+	border-radius: 28px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.signup-card h2 {
+	font-size: 48px;
+	color: #1f2937;
+	margin-bottom: 5px;
+}
+
+.subtitle {
+	color: #666;
+	margin-bottom: 25px;
+}
+
+/* FORM */
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+	width: 100%;
+	padding: 14px 16px;
+	border: 1px solid #e6e6e6;
+	border-radius: 14px;
+	font-size: 15px;
+	outline: none;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus
+	{
+	border-color: #fc8019;
+}
+
+textarea {
+	resize: none;
+	height: 90px;
+}
+
+.signup-btn {
+	width: 100%;
+	padding: 15px;
+	border: none;
+	border-radius: 14px;
+	background: #fc8019;
+	color: white;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.signup-btn:hover {
+	background: #e66f00;
+}
+
+.login-link {
+	text-align: center;
+	margin-top: 20px;
+	color: #666;
+}
+
+.login-link a {
+	color: #fc8019;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.signup-btn-secondary {
+	width: 100%;
+	padding: 15px;
+	margin-top: 12px;
+	border: 2px solid #fc8019;
+	border-radius: 14px;
+	background: #fff;
+	color: #fc8019;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.signup-btn-secondary:hover {
+	background: #fc8019;
+	color: #fff;
+}
+
+.links {
+	margin-top: 25px;
+	text-align: center;
+	line-height: 1.9;
+}
+
+.links p {
+	color: #666;
+	font-size: 15px;
+}
+
+.links a {
+	color: #fc8019;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.links a:hover {
+	text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media ( max-width :1200px) {
+	.left-panel {
+		width: 50%;
+	}
+	.right-panel {
+		width: 50%;
+	}
+	.food-image {
+		width: 550px;
+	}
+	.left-panel h1 {
+		font-size: 60px;
+	}
+}
+</style>
+
+</head>
+<body>
+
+	<div class="signup-container">
+
+		<!-- LEFT -->
+
+		<div class="left-panel">
+
+			<div class="logo">FoodHub</div>
+
+			<h1>
+				Good Food,<br> <span>Great Mood!</span>
+			</h1>
+
+			<p>Create your account and start ordering delicious food from
+				your favourite restaurants.</p>
+
+			<div class="feature">
+
+				<div class="feature-card">
+					<div class="feature-icon">🛵</div>
+					<div>
+						<h4>Fast Delivery</h4>
+						<p>At Your Doorstep</p>
+					</div>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-icon">⏰</div>
+					<div>
+						<h4>20 Min</h4>
+						<p>Average Delivery Time</p>
+					</div>
+				</div>
+
+				<div class="feature-card">
+					<div class="feature-icon">🏷️</div>
+					<div>
+						<h4>Great Offers</h4>
+						<p>On Every Order</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="bg-icon burger">🍔</div>
+			<div class="bg-icon pizza">🍕</div>
+			<div class="bg-icon leaf">🍃</div>
+
+			<div class="dot dot1"></div>
+			<div class="dot dot2"></div>
+			<div class="dot dot3"></div>
+
+
+
+			<img src="images/banner6.png" class="food-image">
+
+		</div>
+
+		<!-- RIGHT -->
+
+		<div class="right-panel">
+
+			<div class="signup-card">
+
+				<h2>Sign Up</h2>
+
+				<p class="subtitle">Create your FoodHub account</p>
+
+				<form action="callRegistrationServlet" method="post">
+
+					<div class="form-row">
+
+						<div class="form-group">
+							<label>Username</label> <input type="text" name="username"
+								required>
+						</div>
+
+						<div class="form-group">
+							<label>Email</label> <input type="email" name="email" required>
+						</div>
+
+					</div>
+
+					<div class="form-row">
+
+						<div class="form-group">
+							<label>Password</label> <input type="password" name="password"
+								required>
+						</div>
+
+						<div class="form-group">
+							<label>Role</label> <select name="role" required>
+								<option value="">Select Role</option>
+								<option value="Customer">Customer</option>
+								<option value="RestaurantOwner">Restaurant Owner</option>
+								<option value="Admin">Admin</option>
+							</select>
+
+						</div>
+
+					</div>
+
+					<div class="form-group">
+						<label>Address</label>
+						<textarea name="address" required></textarea>
+					</div>
+
+					<button type="submit" class="signup-btn">Create Account</button>
+
+					<button type="button" class="signup-btn-secondary"
+						onclick="window.location.href='LoginPage.html'">Login</button>
+
+				</form>
+
+				<div class="links">
+
+
+					<p>
+						Restaurant Owner? <a href="RestaurantOwnerLogin.html">Restaurant
+							Login</a>
+					</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
+```
